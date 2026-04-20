@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: olist
+    database: PROD
+    schema: OLIST_RAW
+    tables:
+      - name: ORDERS_RAW
+      - name: CUSTOMERS_RAW
+      - name: ORDER_ITEMS_RAW
+      - name: ORDER_PAYMENTS_RAW
+      - name: ORDER_REVIEWS_RAW
+      - name: PRODUCTS_RAW
+      - name: SELLERS_RAW
+      - name: CATEGORY_TRANSLATION_RAW

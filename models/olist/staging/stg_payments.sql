@@ -1,0 +1,10 @@
+{{ config(schema='OLIST_STAGING', tags=['staging']) }}
+
+SELECT
+    ORDER_ID,
+    PAYMENT_SEQUENTIAL,
+    PAYMENT_TYPE,
+    PAYMENT_INSTALLMENTS,
+    PAYMENT_VALUE
+FROM {{ source('olist', 'ORDER_PAYMENTS_RAW') }}
+WHERE ORDER_ID IS NOT NULL
